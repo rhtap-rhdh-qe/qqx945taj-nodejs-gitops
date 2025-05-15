@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: qqx945taj-nodejs
+  janus-idp.io/tekton: qqx945taj-nodejs
+  backstage.io/kubernetes-id: qqx945taj-nodejs
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: qqx945taj-nodejs
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
